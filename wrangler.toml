@@ -1,0 +1,12 @@
+# 小窝 MCP 服务 · Wrangler 配置
+# 供 Cloudflare「Deploy to Cloudflare」一键部署使用
+
+name = "xiaowo2"
+main = "worker.js"
+compatibility_date = "2024-12-01"
+
+# KV 绑定：注意【不要写 id 这一行】
+# 写 id = ""（空字符串）会导致一键部署报「解析 Wrangler 配置文件时出现问题」
+# 整个省略 id，一键部署 / wrangler deploy 时才会自动创建并绑定
+[[kv_namespaces]]
+binding = "NEST"
